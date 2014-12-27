@@ -78,6 +78,10 @@ body {
     left: 20px;
     transition: 300ms all ease-in-out; }
     .topnav__burger.active {
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Chrome, Safari, Opera */
       transform: rotate(45deg); }
 
   .topnav__drawer {
