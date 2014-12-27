@@ -1,0 +1,11 @@
+$container-padding-horz: 20px;
+$content-width: 960px - (2 * $container-padding-horz);
+
+%container {
+  width: $content-width;
+  max-width: 100%;
+  padding-left: $container-padding-horz;
+  padding-right: $container-padding-horz;
+  margin-left: auto;
+  margin-right: auto;
+}
