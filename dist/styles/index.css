@@ -21,7 +21,7 @@ body {
   left: 0;
   height: 60px;
   width: 100%;
-  background: #000;
+  background: #343030;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   z-index: 2; }
 
@@ -70,12 +70,6 @@ body {
   text-decoration: none;
   line-height: 60px; }
 
-.banner {
-  display: block;
-  width: 100%;
-  height: 400px;
-  background-color: #598029; }
-
 @media screen and (max-width: 767px) {
   .topnav__burger {
     display: inline-block;
@@ -120,3 +114,9 @@ body {
   .topnav__logo-image {
     margin-right: 0; }
  }
+
+.banner {
+  display: block;
+  width: 100%;
+  background-color: #984F3B; }
+
