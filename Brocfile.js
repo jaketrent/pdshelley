@@ -1,3 +1,5 @@
+'use strict';
+
 var compileSass = require('broccoli-sass');
 var pickFiles = require('broccoli-static-compiler');
 var mergeTrees = require('broccoli-merge-trees');
@@ -7,10 +9,10 @@ var app = pickFiles('client', {
   destDir: '/'
 });
 
-var sass = compileSass(
+var css = compileSass(
   [ 'client/styles' ],
   'index.scss',
   'styles/index.css'
 );
 
-module.exports = mergeTrees([ app, sass ]);
+module.exports = mergeTrees([ app, css ]);

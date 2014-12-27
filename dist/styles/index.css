@@ -22,10 +22,17 @@ body {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); }
 
 .topnav__item {
-  vertical-align: top; }
+  vertical-align: top;
+  display: inline-block; }
+
+.topnav__burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: url(../images/plus.png);
+  background-size: cover; }
 
 .topnav__logo {
-  display: inline-block;
   height: 60px; }
 
 .topnav__logo-image {
@@ -33,7 +40,6 @@ body {
   margin: 10px 50px 10px 30px; }
 
 .topnav__link {
-  display: inline-block;
   height: 60px;
   line-height: 60px;
   margin: 0 20px;
@@ -59,3 +65,20 @@ body {
   height: 400px;
   background-color: #598029; }
 
+@media screen and (max-width: 767px) {
+  .topnav__burger {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    transition: 300ms all ease-in-out; }
+    .topnav__burger.active:hover {
+      transform: rotate(45deg); }
+
+  .topnav__link, .topnav__shop {
+    display: none; }
+
+  .topnav__logo {
+    width: 100%;
+    text-align: center; }
+ }

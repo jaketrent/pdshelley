@@ -1,5 +1,7 @@
 $topnav-height: 60px;
 $topnav-padding-horz: 30px;
+$topnav-padding-vert: 10px;
+
 .topnav {
   position: fixed;
   top: 0;
@@ -11,17 +13,23 @@ $topnav-padding-horz: 30px;
 }
 .topnav__item {
   vertical-align: top;
+  display: inline-block;
+}
+.topnav__burger {
+  display: none;
+  width: $topnav-height - (2 * $topnav-padding-vert);
+  height: $topnav-height - (2 * $topnav-padding-vert);
+  background: url(../images/plus.png);
+  background-size: cover;
 }
 .topnav__logo {
-  display: inline-block;
   height: $topnav-height;
 }
 .topnav__logo-image {
-  height: $topnav-height - 20;
-  margin: 10px 50px 10px $topnav-padding-horz;
+  height: $topnav-height - (2 * $topnav-padding-vert);
+  margin: $topnav-padding-vert 50px $topnav-padding-vert $topnav-padding-horz;
 }
 .topnav__link {
-  display: inline-block;
   height: $topnav-height;
   line-height: $topnav-height;
   margin: 0 20px;
@@ -55,4 +63,26 @@ $topnav-padding-horz: 30px;
 }
 .filler {
   @extend %container;
+}
+
+@media screen and (max-width: $bp-med) {
+  .topnav__burger {
+    display: inline-block;
+    position: absolute;
+    top: $topnav-padding-vert;
+    left: $topnav-padding-horz;
+    transition: 300ms all ease-in-out;
+
+    &.active:hover {
+      transform: rotate(45deg);
+    }
+  }
+  .topnav__link,
+  .topnav__shop {
+    display: none;
+  }
+  .topnav__logo {
+    width: 100%;
+    text-align: center;
+  }
 }
