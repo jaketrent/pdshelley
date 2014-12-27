@@ -1,0 +1,22 @@
+{
+  "name": "pdshelley",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "broccoli serve",
+    "server": "node server/index",
+    "dist": "broccoli build dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli": "^0.13.3",
+    "broccoli-cli": "0.0.1",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-sass": "^0.3.3",
+    "broccoli-static-compiler": "^0.2.1"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "gzippo": "^0.2.0"
+  }
+}

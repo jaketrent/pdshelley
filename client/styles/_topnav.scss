@@ -1,0 +1,48 @@
+$topnav-height: 60px;
+.topnav {
+  height: $topnav-height;
+  background: $brand-primary-color;
+}
+.topnav__item {
+  vertical-align: top;
+}
+.topnav__logo {
+  display: inline-block;
+  height: $topnav-height;
+  margin-right: 50px;
+}
+.topnav__logo-image {
+  height: $topnav-height;
+}
+.topnav__link {
+  display: inline-block;
+  height: $topnav-height;
+  line-height: $topnav-height;
+  margin: 0 20px;
+  color: $text-alt-color;
+  text-decoration: none;
+
+  &:active,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    color: $text-alt-color;
+  }
+}
+.topnav__shop {
+  display: inline-block;
+  // TODO: replace w/ image
+  color: white;
+  text-decoration: none;
+  line-height: $topnav-height;
+}
+.banner {
+  // TODO: replace w/ image
+  display: block;
+  width: 100%;
+  height: 400px;
+  background-color: #598029;
+}
+.filler {
+  @extend %container;
+}
