@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +22,8 @@ body {
   height: 60px;
   width: 100%;
   background: #000;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2; }
 
 .topnav__item {
   vertical-align: top;
@@ -30,7 +34,8 @@ body {
   width: 40px;
   height: 40px;
   background: url(../images/plus.png);
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
 
 .topnav__logo {
   height: 60px; }
@@ -39,15 +44,21 @@ body {
   height: 40px;
   margin: 10px 50px 10px 30px; }
 
+.topnav__drawer {
+  display: inline-block; }
+
 .topnav__link {
-  height: 60px;
-  line-height: 60px;
-  margin: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin: 10px 0;
   color: #fff;
   text-decoration: none; }
-  .topnav__link:active, .topnav__link:visited, .topnav__link:hover {
+  .topnav__link.active, .topnav__link:active, .topnav__link:hover {
     text-decoration: none;
-    color: #fff; }
+    color: #000;
+    background: #fff;
+    border-radius: 3px; }
 
 .topnav__shop {
   position: absolute;
@@ -70,15 +81,42 @@ body {
     display: inline-block;
     position: absolute;
     top: 10px;
-    left: 30px;
+    left: 20px;
     transition: 300ms all ease-in-out; }
-    .topnav__burger.active:hover {
+    .topnav__burger.active {
       transform: rotate(45deg); }
 
+  .topnav__drawer {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    max-height: 0;
+    width: 100%;
+    background: rgba(88, 88, 90, 0.9);
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.7s all ease-in-out; }
+    .topnav__drawer.active {
+      max-height: 1024px; }
+
   .topnav__link, .topnav__shop {
-    display: none; }
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0 20px; }
+    .topnav__link:active, .topnav__link:hover, .topnav__shop:active, .topnav__shop:hover {
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5); }
+
+  .topnav__shop {
+    position: static;
+    display: block; }
 
   .topnav__logo {
     width: 100%;
     text-align: center; }
+
+  .topnav__logo-image {
+    margin-right: 0; }
  }
